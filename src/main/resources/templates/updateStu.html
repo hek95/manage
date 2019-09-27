@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="margin:0 auto;width:400px">
+<form action="/stu/updateStu" method="post">
+    <input type="hidden" value="" name="id" th:value="${student.id}">
+    <input type="text" name="name" th:value="${student.name}" ><br>
+    <input type="radio" name="sex" value="1" th:checked="${student.sex eq 1}"> 男<br>
+    <input type="radio" name="sex" value="0" th:checked="${student.sex eq 0}" > 女<br>
+    <select name="garden">
+        <option value="" th:each="class : ${stuClassList}" th:text="${class.className}" th:value="${class.id}" th:selected="${class.id eq student.garden}"> </option>
+    </select>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
