@@ -20,7 +20,7 @@ public class StuClassController {
     private IStuClassService stuClassService;
 
     /**
-     * 得到全部班级信息
+     * 1234567
      * @param model
      * @return
      */
