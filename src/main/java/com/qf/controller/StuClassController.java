@@ -1,7 +1,6 @@
 package com.qf.controller;
 
 import com.qf.entity.StuClass;
-import com.qf.entity.Student;
 import com.qf.service.IStuClassService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +18,12 @@ import java.util.List;
 public class StuClassController {
     @Autowired
     private IStuClassService stuClassService;
+
+    /**
+     * 得到全部班级信息
+     * @param model
+     * @return
+     */
     @RequestMapping("getAllClass")
     public String getAllClass(Model model){
         List<StuClass> stuClassList = stuClassService.list(null);
